@@ -8,9 +8,6 @@ export function wordWrap(line: String, col: number): String{
         if(line.charAt(col - 1) === ' ') partFirst = line.substring(0, col - 1);
         if(line.charAt(col - 2) === ' ') partFirst = line.substring(0, col - 2);
         if(line.charAt(col - 2) === ' ') partSecond = line.substring( col - 1);
-
-
-        
         
         return partFirst + '\n' + wordWrap(partSecond, col);
     }
